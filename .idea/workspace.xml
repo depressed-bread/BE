@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="" />
+    <list default="true" id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/enums/EmotionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/enums/EmotionType.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -111,7 +114,7 @@
       <workItem from="1720955966161" duration="316000" />
       <workItem from="1720956401216" duration="1308000" />
       <workItem from="1720957768451" duration="13000" />
-      <workItem from="1720957793766" duration="1459000" />
+      <workItem from="1720957793766" duration="2254000" />
     </task>
     <servers />
   </component>
