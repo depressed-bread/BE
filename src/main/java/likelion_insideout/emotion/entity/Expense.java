@@ -1,15 +1,15 @@
 package likelion_insideout.emotion.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.sql.Date;
 
 @Entity
 @Table(name = "expense")
 @Getter
-@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Expense {
 
     @Id
