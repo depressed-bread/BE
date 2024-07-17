@@ -2,9 +2,7 @@ package likelion_insideout.emotion.entity;
 
 import jakarta.persistence.*;
 import likelion_insideout.emotion.entity.enums.EmotionType;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +11,8 @@ import java.util.List;
 @Builder
 @Table(name = "emotion")
 @Getter
-@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Emotion {
 
     @Id
