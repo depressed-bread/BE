@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/Emotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/Emotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/Expense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/ReportController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +41,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,7 +68,7 @@
     "Gradle.BE [:EmotionApplication.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/report-2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/dbqud/OneDrive/바탕 화면/해커톤/BE/src/main/java",
@@ -92,9 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller" />
+      <recent name="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/service" />
+      <recent name="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/dto" />
       <recent name="C:\Users\dbqud\OneDrive\바탕 화면\해커톤\BE\src\main\java\likelion_insideout" />
       <recent name="C:\Users\dbqud\OneDrive\바탕 화면\해커톤\BE\src\main\java\likelion_insideout\emotion\user" />
-      <recent name="C:\Users\dbqud\OneDrive\바탕 화면\해커톤\BE\src\main\java\likelion_insideout\emotion" />
     </key>
   </component>
   <component name="RunManager">

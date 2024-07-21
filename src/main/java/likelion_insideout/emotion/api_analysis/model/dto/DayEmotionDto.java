@@ -8,10 +8,7 @@ import java.sql.Date;
 
 @Data
 @AllArgsConstructor
-public class ExpenseDto {
-    private Long id;
+public class DayEmotionDto {
     private Date date;
     private EmotionType emotion;
-    private Long price;
-    private String keyword;
 }
