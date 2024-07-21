@@ -21,7 +21,7 @@ public class ExpenseController {
 
     @PostMapping
     @Operation(summary = "Create 지출 게시글 생성")
-    public ResponseEntity<ExpenseCreateDto> createExpense(@RequestParam Long id, //사용자 id
+    public ResponseEntity<ExpenseCreateDto> createExpense(@RequestParam("id") Long id, //사용자 id
                                                           @RequestBody ExpenseRequestDto expenseRequestDto) {
 
         Long expenseId = expenseService.createExpense(id, expenseRequestDto);
