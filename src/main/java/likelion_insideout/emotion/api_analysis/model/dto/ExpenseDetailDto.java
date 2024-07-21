@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class ExpenseDetailDto {
+    private Long id;
     private String keyword;
     private Long price;
     private EmotionType emotion;
