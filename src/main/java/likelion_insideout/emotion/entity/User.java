@@ -39,4 +39,8 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     @Builder.Default
     private List<Expense> expenseList = new ArrayList<>();
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
