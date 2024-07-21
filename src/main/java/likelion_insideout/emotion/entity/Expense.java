@@ -1,6 +1,7 @@
 package likelion_insideout.emotion.entity;
 
 import jakarta.persistence.*;
+import likelion_insideout.emotion.api_expense_post.model.dto.ExpenseRequestDto;
 import lombok.*;
 
 import java.sql.Date;
@@ -10,6 +11,7 @@ import java.sql.Date;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Expense {
 
     @Id
@@ -34,4 +36,14 @@ public class Expense {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "emotion_id", nullable = false)
     private Emotion emotion;
+
+    public void update(ExpenseRequestDto expenseRequestDto, Emotion emotion) {
+
+        this.keyword = expenseRequestDto.getKeyword();
+        this.content = expenseRequestDto.getContent();
+        this.price = expenseRequestDto.getPrice();
+        this.date = expenseRequestDto.getDate();
+        this.emotion = emotion;
+
+    }
 }
