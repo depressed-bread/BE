@@ -26,4 +26,5 @@ public class Emotion {
     @OneToMany(mappedBy = "emotion", fetch = FetchType.LAZY)
     @Builder.Default
     private List<Expense> expenseList = new ArrayList<>();
+
 }
