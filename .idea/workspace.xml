@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a256c71-b3c8-48b5-a95a-8d19e4dfa551" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/controller/ReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/controller/ReportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/dto/ExpenseDetailDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/dto/ExpenseDetailDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/dto/ExpenseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/dto/ExpenseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/repository/ExpenseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/repository/ExpenseRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/service/ReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_analysis/model/service/ReportService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/StatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/StatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/controller/ExpenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/controller/ExpenseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/model/dto/ExpenseRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/model/dto/ExpenseRequestDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +67,15 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.EmotionApplication.executor": "Run",
-    "git-widget-placeholder": "develop"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.EmotionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller" />
@@ -115,10 +107,18 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="" />
+      <changelist id="9a256c71-b3c8-48b5-a95a-8d19e4dfa551" name="Changes" comment="" />
       <created>1720947193734</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -131,6 +131,8 @@
       <workItem from="1720956401216" duration="1308000" />
       <workItem from="1720957768451" duration="13000" />
       <workItem from="1720957793766" duration="2254000" />
+      <workItem from="1721574384951" duration="116000" />
+      <workItem from="1721574585326" duration="17000" />
     </task>
     <servers />
   </component>
