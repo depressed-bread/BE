@@ -26,22 +26,22 @@ public class StatController {
 
     @GetMapping("/week")
     @Operation(summary = "주간 소비 통계")
-    public Long getWeekPrice(@RequestParam("id") Long id) {
-        return statService.getWeekPrice(id);
+    public Long getWeekPrice(Authentication authentication) {
+        return statService.getWeekPrice(authentication);
     }
 
     @GetMapping("/month")
     @Operation(summary = "월간 소비 통계")
-    public Long getMonthPrice(@RequestParam("id") Long id) {
-        return statService.getMonthPrice(id);
+    public Long getMonthPrice(Authentication authentication) {
+        return statService.getMonthPrice(authentication);
     }
 
     @GetMapping("/custom")
     @Operation(summary = "날짜지정 소비 통계")
     public Long getCustomPrice(
-            @RequestParam("id") Long id,
+            Authentication authentication,
             @RequestParam("startDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
             @RequestParam("endDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate) {
-        return statService.getCustomPrice(id, startDate, endDate);
+        return statService.getCustomPrice(authentication, startDate, endDate);
     }
 }

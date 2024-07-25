@@ -39,7 +39,7 @@ public class SecurityConfig {
                 .csrf((csrfConfig) -> csrfConfig.disable())
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**").permitAll()
-                        .requestMatchers("/api/user/find-id", "/api/user/info", "/login", "/logout").permitAll()
+                        .requestMatchers("/api/user/find-id", "/api/user/info", "/api/user/register", "/login", "/logout").permitAll()
                         .requestMatchers("/api/**").hasAnyRole(Role.USER.name(), Role.ADMIN.name())
                         .requestMatchers("/user/**").hasRole(Role.ADMIN.name())
                         .anyRequest().authenticated()

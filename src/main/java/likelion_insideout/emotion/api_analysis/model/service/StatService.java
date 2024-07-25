@@ -27,6 +27,7 @@ public class StatService {
     public Long getDayPrice(Authentication authentication) {
         User user = (User) userRepository.findByEmail(authentication.getName())
                 .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
         List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
@@ -47,9 +48,12 @@ public class StatService {
         return totalPrice;
     }
 
-    public Long getWeekPrice(Long id) {
+    public Long getWeekPrice(Authentication authentication) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
         // 오늘 날짜 구하기
         LocalDate today = LocalDate.now();
@@ -61,9 +65,12 @@ public class StatService {
         return getPriceByPeriod(expenses, startOfWeek, endOfWeek);
     }
 
-    public Long getMonthPrice(Long id) {
+    public Long getMonthPrice(Authentication authentication) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
         // 오늘 날짜 구하기
         LocalDate today = LocalDate.now();
@@ -75,9 +82,12 @@ public class StatService {
         return getPriceByPeriod(expenses, startOfMonth, endOfMonth);
     }
 
-    public Long getCustomPrice(Long id, LocalDate startDate, LocalDate endDate) {
+    public Long getCustomPrice(Authentication authentication, LocalDate startDate, LocalDate endDate) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
         return getPriceByPeriod(expenses, startDate, endDate);
     }

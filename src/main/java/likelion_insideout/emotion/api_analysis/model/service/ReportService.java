@@ -7,8 +7,11 @@ import likelion_insideout.emotion.api_analysis.model.dto.ExpenseDto;
 import likelion_insideout.emotion.api_analysis.model.repository.EmotionRepository;
 import likelion_insideout.emotion.api_analysis.model.repository.ExpenseRepository;
 import likelion_insideout.emotion.api_analysis.model.repository.UserRepository;
+import likelion_insideout.emotion.entity.User;
 import likelion_insideout.emotion.entity.enums.EmotionType;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,9 +34,12 @@ public class ReportService {
     private final UserRepository userRepository;
 
     @Transactional(readOnly = true)
-    public ExpenseReportDto getDayExpenses(Long id, String emotionType) {
+    public ExpenseReportDto getDayExpenses(Authentication authentication, String emotionType) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
         // 오늘 날짜 구하기
         LocalDate today = LocalDate.now();
@@ -66,9 +72,12 @@ public class ReportService {
     }
 
     @Transactional(readOnly = true)
-    public List<ExpenseReportDto> getWeekExpenses(Long id, String emotionType) {
+    public List<ExpenseReportDto> getWeekExpenses(Authentication authentication, String emotionType) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
         // 오늘 날짜 구하기
         LocalDate today = LocalDate.now();
@@ -85,9 +94,12 @@ public class ReportService {
     }
 
     @Transactional(readOnly = true)
-    public List<ExpenseReportDto> getMonthExpenses(Long id, String emotionType) {
+    public List<ExpenseReportDto> getMonthExpenses(Authentication authentication, String emotionType) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
         // 오늘 날짜 구하기
         LocalDate today = LocalDate.now();
@@ -102,9 +114,12 @@ public class ReportService {
     }
 
     @Transactional(readOnly = true)
-    public List<ExpenseReportDto> getCustomExpenses(Long id, LocalDate startDate, LocalDate endDate, String emotionType) {
+    public List<ExpenseReportDto> getCustomExpenses(Authentication authentication, LocalDate startDate, LocalDate endDate, String emotionType) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
         // 모든 지출 정보 조회
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
 
         List<ExpenseReportDto> expenseReportDtoList = getExpensesByPeriod(expenses, startDate, endDate, emotionType);
 
@@ -155,8 +170,13 @@ public class ReportService {
         return expenseReportDtoList;
     }
 
-    public List<DayEmotionDto> getMonthEmotion(Long id, int year, int month) {
-        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(id);
+    public List<DayEmotionDto> getMonthEmotion(Authentication authentication, int year, int month) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
+        // 모든 지출 정보 조회
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
+
         YearMonth yearMonth = YearMonth.of(year, month);
         LocalDate startDate = yearMonth.atDay(1);
         LocalDate endDate = yearMonth.atEndOfMonth();
