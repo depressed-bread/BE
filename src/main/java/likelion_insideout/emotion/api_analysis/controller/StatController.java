@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import likelion_insideout.emotion.api_analysis.model.service.StatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,9 +22,7 @@ public class StatController {
 
     @GetMapping("/day")
     @Operation(summary = "일일 소비 통계")
-    public Long getDayPrice(@RequestParam("id") Long id) {
-        return statService.getDayPrice(id);
-    }
+    public Long getDayPrice(Authentication authentication) {return statService.getDayPrice(authentication);}
 
     @GetMapping("/week")
     @Operation(summary = "주간 소비 통계")

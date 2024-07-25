@@ -13,4 +13,7 @@ public class ResetPasswordDto {
     private String currentPassword;
     private String newPassword;
 
+    public String getEmail() {
+        return currentPassword;
+    }
 }

@@ -5,13 +5,13 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://127.0.0.1:3306/
-    #url: jdbc:mysql://localhost:3306/mydatabase
-    #username: root
-    #password: Likelion1234@
-
-    url: jdbc:mysql://localhost:3305/emotion_app?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/mydatabase
     username: root
-    password: 1234
+    password: Likelion1234@
+
+    #url: jdbc:mysql://localhost:3305/emotion_app?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    #username: root
+    #password: 1234
 
   jpa:
     show-sql: true
@@ -34,3 +34,16 @@ springdoc:
     operationsSorter: method
     disable-swagger-default-url: true
     display-request-duration: true
+  show-login-endpoint: true
+
+  spring:
+    mail:
+      host: smtp.naver.com
+      port: 465
+      username: rufdk09@naver.com
+      password: Lana1108!@
+      properties:
+        mail.smtp.auth: true
+        mail.smtp.ssl.enable: true
+        mail.smtp.ssl.trust: smtp.naver.com
+

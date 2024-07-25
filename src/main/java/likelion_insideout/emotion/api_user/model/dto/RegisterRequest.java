@@ -1,5 +1,8 @@
 package likelion_insideout.emotion.api_user.model.dto;
 
+import likelion_insideout.emotion.entity.User;
+import likelion_insideout.emotion.entity.enums.EmotionType;
+import likelion_insideout.emotion.entity.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,4 +18,15 @@ public class RegisterRequest {
     private String phone;
     private String password;
     private String passwordChk;
+
+    public User toEntity(){
+        return User.builder()
+                .password(this.password)
+                .name(this.name)
+                .email(this.email)
+                .phone(this.phone)
+                .role(Role.USER)
+                .emotion(EmotionType.JOY)
+                .build();
+    }
 }

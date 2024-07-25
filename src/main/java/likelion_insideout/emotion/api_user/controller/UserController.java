@@ -1,9 +1,11 @@
 package likelion_insideout.emotion.api_user.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
 import likelion_insideout.emotion.api_user.model.dto.*;
 import likelion_insideout.emotion.api_user.model.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    public UserService userService;
 
     //회원가입
     @PostMapping("/register")
@@ -19,28 +21,17 @@ public class UserController {
         return ResponseEntity.ok(userService.registerUser(registerRequest));
     }
 
-    //로그인
-    @PostMapping("/login")
-    public ResponseEntity<TokenResponse> loginUser(@RequestBody LoginRequest loginRequest) {
-        return ResponseEntity.ok(userService.loginUser(loginRequest));
-    }
-
-    //로그아웃
-    @PostMapping("/logout")
-    public ResponseEntity<MessageResponse> logoutUser() {
-        return ResponseEntity.ok(userService.logoutUser());
-    }
-
     //아이디찾기
     @PostMapping("/find-id")
     public ResponseEntity<FindIdDto> findId(@RequestBody FindIdDto findIdRequest) {
-        return ResponseEntity.ok(userService.findId(findIdRequest));
+       return ResponseEntity.ok(userService.findId(findIdRequest));
     }
 
     //임시비밀번호 발송
     @PostMapping("/send-temp-password")
     public ResponseEntity<MessageResponse> sendTemporaryPassword(@RequestBody SendTempPasswordRequest sendTempPasswordRequest) {
-        return ResponseEntity.ok(userService.sendTemporaryPassword(sendTempPasswordRequest));
+        MessageResponse response = userService.sendTemporaryPassword(String.valueOf(sendTempPasswordRequest));
+        return ResponseEntity.ok(response);
     }
 
     //비밀번호 재설정
@@ -66,4 +57,6 @@ public class UserController {
     public ResponseEntity<MessageResponse> updateUserInfo(@RequestBody UpdateUserRequest updateUserRequest) {
         return ResponseEntity.ok(userService.updateUserInfo(updateUserRequest));
     }
+
+
 }

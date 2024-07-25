@@ -5,6 +5,7 @@ import likelion_insideout.emotion.entity.enums.EmotionType;
 import likelion_insideout.emotion.entity.enums.Role;
 import lombok.*;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,20 +28,22 @@ public class User {
 
     private String password;
 
-    private String phoneNumber;
+    private String phone;
 
+    @Getter
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Role role;
 
     @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "varchar(255) default '무표정'")
     private EmotionType emotion;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     @Builder.Default
     private List<Expense> expenseList = new ArrayList<>();
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void updatePassword(String encodePw) {
+        this.password = encodePw;
     }
+
 }

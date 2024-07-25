@@ -4,10 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a256c71-b3c8-48b5-a95a-8d19e4dfa551" name="Changes" comment="">
+    <list default="true" id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c86e4d78-9f07-4408-ad4c-57bedf9eef8a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c86e4d78-9f07-4408-ad4c-57bedf9eef8a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/controller/ExpenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/controller/ExpenseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/model/dto/ExpenseRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_expense_post/model/dto/ExpenseRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/FindIdDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/FindIdDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/MessageResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/UserInfoResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/UserInfoResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/repository/apiUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/repository/apiUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/Expense.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/Expense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/StatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/StatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/service/StatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/service/StatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/FindIdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/FindIdDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/MessageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/UserInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/UserInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/repository/apiUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/repository/apiUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +79,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -53,6 +89,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="없음" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -69,20 +108,48 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.EmotionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Gradle.BE [:EmotionApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BE 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EmotionApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/dbqud/OneDrive/바탕 화면/해커톤/BE/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hanwldn/Desktop/JavaWorkspace/BE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora_aws&quot;,
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="likelion_insideout.emotion.api_user.model.service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller" />
-      <recent name="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/dto" />
       <recent name="C:\Users\dbqud\OneDrive\바탕 화면\해커톤\BE\src\main\java\likelion_insideout" />
       <recent name="C:\Users\dbqud\OneDrive\바탕 화면\해커톤\BE\src\main\java\likelion_insideout\emotion\user" />
+      <recent name="C:\Users\dbqud\OneDrive\바탕 화면\해커톤\BE\src\main\java\likelion_insideout\emotion" />
     </key>
   </component>
   <component name="RunManager">
@@ -110,15 +177,15 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9a256c71-b3c8-48b5-a95a-8d19e4dfa551" name="Changes" comment="" />
+      <changelist id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="" />
       <created>1720947193734</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -131,8 +198,10 @@
       <workItem from="1720956401216" duration="1308000" />
       <workItem from="1720957768451" duration="13000" />
       <workItem from="1720957793766" duration="2254000" />
-      <workItem from="1721574384951" duration="116000" />
-      <workItem from="1721574585326" duration="17000" />
+      <workItem from="1721661485269" duration="13081000" />
+      <workItem from="1721695680906" duration="39954000" />
+      <workItem from="1721816152585" duration="5436000" />
+      <workItem from="1721858044372" duration="8280000" />
     </task>
     <servers />
   </component>

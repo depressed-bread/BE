@@ -9,8 +9,7 @@ import lombok.*;
 public class FindIdDto {
     private String name;
     private String phone;
-    private String email;
 
-    public FindIdDto(String email) {
+    public FindIdDto(String email) {;
     }
 }

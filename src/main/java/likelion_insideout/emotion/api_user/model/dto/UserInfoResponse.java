@@ -10,7 +10,5 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInfoResponse {
-    private String name;
-    private String nickName;
     private String email;
 }

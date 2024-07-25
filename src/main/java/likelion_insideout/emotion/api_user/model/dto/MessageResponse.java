@@ -1,14 +1,15 @@
 package likelion_insideout.emotion.api_user.model.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.aspectj.bridge.IMessage;
+import org.aspectj.bridge.Message;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class MessageResponse {
     private String message;
+    private String email;
 }
