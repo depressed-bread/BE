@@ -11,8 +11,11 @@ import likelion_insideout.emotion.api_expense_post.model.repository.UsersReposit
 import likelion_insideout.emotion.entity.Emotion;
 import likelion_insideout.emotion.entity.Expense;
 import likelion_insideout.emotion.entity.User;
+import likelion_insideout.emotion.entity.enums.EmotionType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -28,30 +31,30 @@ public class ExpenseService {
 
     //Create : 지출 게시글 저장
     @Transactional
-    public Long createExpense(Long id, ExpenseRequestDto expenseRequestDto)  {
+    public Long createExpense(ExpenseRequestDto expenseRequestDto, Authentication authentication)  {
 
-        //1. 사용자가 설정한 감정 이름을 기준으로 감정 객체 반환 ex) ANGRY 감정 객체
+        //1. 로그인한 사용자 받아오기
+        User user = userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
+        //2. 사용자가 설정한 감정 이름을 기준으로 감정 객체 반환 ex) ANGRY 감정 객체
         Optional<Emotion> emotionOptional = emotionsRepository.findByName(expenseRequestDto.getEmotionType());
         Emotion emotion;
 
-        if (emotionOptional.isEmpty()) { //2. 만약 ANGRY 감정 객체가 없다면 객체 생성 후 DB에 저장
+        if (emotionOptional.isEmpty()) {//3-1. 만약 ANGRY 감정 객체가 없다면 객체 생성 후 DB에 저장
+
             emotion = Emotion.builder()
                     .name(expenseRequestDto.getEmotionType())
                     .build();
 
             emotionsRepository.save(emotion);
 
-        } else { //3. ANGRY 감정 객체가 있다면 Opitional에 있는 객체 반환
+        } else { //3-2. ANGRY 감정 객체가 있다면 Opitional에 있는 객체 반환
             emotion = emotionOptional.get();
         }
 
 
-        //4. id값을 통해 사용자
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("해당 사용자는 없습니다."));
-
-
-        //5. 작성한 지출 게시글 생성 후 저장
+        //4. 작성한 지출 게시글 생성 후 저장
         Expense expense = Expense.builder()
                 .user(user)
                 .emotion(emotion)
@@ -66,7 +69,7 @@ public class ExpenseService {
 
     //Read : 선택 게시글 조회
     @Transactional
-    public ExpenseResponseDto readExpense(Long id) {
+    public ExpenseResponseDto readExpense(Long id, Authentication authentication) {
 
         Expense expense = expenseRepository.findById(id).orElseThrow(() ->
                 new IllegalArgumentException("잘못된 게시글 ID 입니다."));
@@ -78,7 +81,7 @@ public class ExpenseService {
 
     //UPDATE : 게시글 수정
     @Transactional
-    public ExpenseUpdateDto updateExpense(Long id,  ExpenseRequestDto expenseRequestDto) {
+    public ExpenseUpdateDto updateExpense(Long id,  ExpenseRequestDto expenseRequestDto, Authentication authentication) {
 
         //1. expenseId를 통해 게시글 불러오기
         Expense expense = expenseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("잘못된 게시글 ID 입니다."));
@@ -107,21 +110,12 @@ public class ExpenseService {
 
     //DELETE : 게시글 삭제
     @Transactional
-    public ExpenseDeleteDto deleteExpense(Long id) {
+    public ExpenseDeleteDto deleteExpense(Long id, Authentication authentication) {
+
+        Expense expense = expenseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("잘못된 게시글 ID 입니다."));
 
         expenseRepository.deleteById(id);
 
         return new ExpenseDeleteDto();
     }
-
-
-
-
-
-
-
-
-
-
-
 }

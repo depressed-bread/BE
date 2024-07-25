@@ -9,7 +9,7 @@ spring:
 #    username: root
 #    password: Likelion1234@
 
-    url: jdbc:mysql://localhost:3305/emotion_app?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/emotion_app?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
     username: root
     password: 1234
 
