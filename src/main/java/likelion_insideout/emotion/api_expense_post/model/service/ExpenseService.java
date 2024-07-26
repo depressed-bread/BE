@@ -14,6 +14,7 @@ import likelion_insideout.emotion.entity.User;
 import likelion_insideout.emotion.entity.enums.EmotionType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -71,9 +72,20 @@ public class ExpenseService {
     @Transactional
     public ExpenseResponseDto readExpense(Long id, Authentication authentication) {
 
+        //1. 로그인한 사용자 받아오기
+        User user = userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
+        //2. 게시글 번호(expenseid) 있는지 확인하기
         Expense expense = expenseRepository.findById(id).orElseThrow(() ->
                 new IllegalArgumentException("잘못된 게시글 ID 입니다."));
 
+        //3. 게시글의 사용자와 로그인한 사용자가 일치하는지 확인
+        if (!expense.getUser().equals(user)) {
+            throw new AccessDeniedException("해당 게시글에 접근할 권한이 없습니다.");
+        }
+
+        //4. 해당 게시글 조회하기
         return new ExpenseResponseDto(expense.getKeyword(), expense.getContent(),
                 expense.getPrice(), expense.getEmotion().getName());
 
@@ -83,10 +95,20 @@ public class ExpenseService {
     @Transactional
     public ExpenseUpdateDto updateExpense(Long id,  ExpenseRequestDto expenseRequestDto, Authentication authentication) {
 
-        //1. expenseId를 통해 게시글 불러오기
-        Expense expense = expenseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("잘못된 게시글 ID 입니다."));
+        //1. 로그인한 사용자 받아오기
+        User user = userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
 
-        //2. 감정 수정이 일어났을 때
+        //2. 게시글 번호(expenseid) 있는지 확인하기
+        Expense expense = expenseRepository.findById(id).orElseThrow(() ->
+                new IllegalArgumentException("잘못된 게시글 ID 입니다."));
+
+        //3. 게시글의 사용자와 로그인한 사용자가 일치하는지 확인
+        if (!expense.getUser().equals(user)) {
+            throw new AccessDeniedException("해당 게시글에 접근할 권한이 없습니다.");
+        }
+
+        //4. 감정 수정이 일어났을 때
         Optional<Emotion> emotionOptional = emotionsRepository.findByName(expenseRequestDto.getEmotionType());
         Emotion emotion;
 
@@ -103,7 +125,7 @@ public class ExpenseService {
 
         expense.update(expenseRequestDto, emotion);
 
-        //3.반환
+        //5.반환
         return new ExpenseUpdateDto();
 
     }
@@ -112,8 +134,20 @@ public class ExpenseService {
     @Transactional
     public ExpenseDeleteDto deleteExpense(Long id, Authentication authentication) {
 
-        Expense expense = expenseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("잘못된 게시글 ID 입니다."));
+        //1. 로그인한 사용자 받아오기
+        User user = userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
 
+        //2. 게시글 번호(expenseid) 있는지 확인하기
+        Expense expense = expenseRepository.findById(id).orElseThrow(() ->
+                new IllegalArgumentException("잘못된 게시글 ID 입니다."));
+
+        //3. 게시글의 사용자와 로그인한 사용자가 일치하는지 확인
+        if (!expense.getUser().equals(user)) {
+            throw new AccessDeniedException("해당 게시글에 접근할 권한이 없습니다.");
+        }
+
+        //4. 해당 게시글 삭제하기
         expenseRepository.deleteById(id);
 
         return new ExpenseDeleteDto();

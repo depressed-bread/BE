@@ -4,6 +4,7 @@ import likelion_insideout.emotion.api_expense_post.model.dto.ErrorResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -15,6 +16,12 @@ public class CustomException {
     public ResponseEntity<ErrorResult> userExHandle(IllegalArgumentException e) {
         ErrorResult errorResult = new ErrorResult("BAD Argument", e.getMessage());
         return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResult> userExHandle(AccessDeniedException e) {
+        ErrorResult errorResult = new ErrorResult("Denied User", e.getMessage());
+        return new ResponseEntity<>(errorResult, HttpStatus.FORBIDDEN);
     }
 
 }
