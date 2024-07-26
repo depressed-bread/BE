@@ -1,5 +1,7 @@
 package likelion_insideout.emotion.api_user.model.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import likelion_insideout.emotion.entity.User;
 import likelion_insideout.emotion.entity.enums.EmotionType;
 import likelion_insideout.emotion.entity.enums.Role;

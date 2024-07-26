@@ -1,11 +1,9 @@
 package likelion_insideout.emotion.api_user.controller;
 
-import io.swagger.v3.oas.annotations.Operation;
 import likelion_insideout.emotion.api_user.model.dto.*;
 import likelion_insideout.emotion.api_user.model.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,14 +21,16 @@ public class UserController {
 
     //아이디찾기
     @PostMapping("/find-id")
-    public ResponseEntity<FindIdDto> findId(@RequestBody FindIdDto findIdRequest) {
-       return ResponseEntity.ok(userService.findId(findIdRequest));
+    public ResponseEntity<UserInfoResponse> findId(@RequestBody FindIdDto findIdRequest) {
+        String email = userService.findId(findIdRequest);
+        UserInfoResponse response = new UserInfoResponse(email);
+        return ResponseEntity.ok(response);
     }
 
     //임시비밀번호 발송
     @PostMapping("/send-temp-password")
     public ResponseEntity<MessageResponse> sendTemporaryPassword(@RequestBody SendTempPasswordRequest sendTempPasswordRequest) {
-        MessageResponse response = userService.sendTemporaryPassword(String.valueOf(sendTempPasswordRequest));
+        MessageResponse response = userService.sendTemporaryPassword(sendTempPasswordRequest.getEmail());
         return ResponseEntity.ok(response);
     }
 
@@ -57,6 +57,4 @@ public class UserController {
     public ResponseEntity<MessageResponse> updateUserInfo(@RequestBody UpdateUserRequest updateUserRequest) {
         return ResponseEntity.ok(userService.updateUserInfo(updateUserRequest));
     }
-
-
 }

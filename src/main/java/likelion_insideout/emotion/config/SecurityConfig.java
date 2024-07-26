@@ -114,15 +114,15 @@ public class SecurityConfig {
     @Bean
     public JavaMailSender javaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost("smtp.example.com");
+        mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(465);
-        mailSender.setUsername("rufdk09@naver.com");
-        mailSender.setPassword("Lana1108!@");
+        mailSender.setUsername("hka97123800@gmail.com");
+        mailSender.setPassword("luyt fzam ehfv izpy");
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");
         props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.ssl.enable", "true");
         props.put("mail.debug", "true");
 
         return mailSender;

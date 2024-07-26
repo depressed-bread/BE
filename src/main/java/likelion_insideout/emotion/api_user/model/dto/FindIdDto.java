@@ -7,9 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FindIdDto {
-    private String name;
+    private String name;    // 사용자 이름
     private String phone;
 
-    public FindIdDto(String email) {;
-    }
 }

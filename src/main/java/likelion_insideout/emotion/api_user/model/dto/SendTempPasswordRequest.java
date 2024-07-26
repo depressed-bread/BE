@@ -11,4 +11,5 @@ import lombok.Setter;
 @AllArgsConstructor
 public class SendTempPasswordRequest {
     private String email;
+    //private String name;
 }

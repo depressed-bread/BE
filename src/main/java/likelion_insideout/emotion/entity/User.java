@@ -22,12 +22,16 @@ public class User {
     @Column(name = "id")
     private Long id;
 
+    @Setter
     private String name;
 
     private String email;
 
     private String password;
 
+    //@Getter(AccessLevel.NONE)
+    //@Setter(AccessLevel.NONE)
+    @Setter
     private String phone;
 
     @Getter
