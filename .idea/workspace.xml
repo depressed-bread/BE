@@ -5,29 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c86e4d78-9f07-4408-ad4c-57bedf9eef8a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c86e4d78-9f07-4408-ad4c-57bedf9eef8a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_expense_post/model/service/ExpenseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_expense_post/model/service/ExpenseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/FindIdDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/FindIdDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/api_user/model/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/FindIdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/FindIdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/ResetPasswordDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/SendTempPasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/SendTempPasswordRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/UpdateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/UpdateUserRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +173,7 @@
       <workItem from="1721891431369" duration="4136000" />
       <workItem from="1721895874228" duration="1285000" />
       <workItem from="1721897201162" duration="54000" />
-      <workItem from="1721904234606" duration="27865000" />
+      <workItem from="1721904234606" duration="31353000" />
     </task>
     <servers />
   </component>

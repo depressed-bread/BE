@@ -20,8 +20,13 @@ public class UserService {
 
     @Autowired
     public apiUserRepository apiUserRepository;
+
+    @Autowired
     public BCryptPasswordEncoder passwordEncoder;
+
+    @Autowired
     private JavaMailSender mailSender;
+
     private EmailValidator emailValidator;
 
     @Transactional
