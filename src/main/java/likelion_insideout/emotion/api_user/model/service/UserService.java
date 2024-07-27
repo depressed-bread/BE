@@ -3,7 +3,10 @@ package likelion_insideout.emotion.api_user.model.service;
 import jakarta.transaction.Transactional;
 import likelion_insideout.emotion.api_user.model.dto.*;
 import likelion_insideout.emotion.api_user.model.repository.apiUserRepository;
+import likelion_insideout.emotion.api_user.model.repository.expenserepository;
+import likelion_insideout.emotion.entity.Expense;
 import likelion_insideout.emotion.entity.User;
+import likelion_insideout.emotion.entity.enums.EmotionType;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.hibernate.validator.internal.constraintvalidators.bv.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +17,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.SimpleMailMessage;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -26,6 +34,10 @@ public class UserService {
 
     @Autowired
     private JavaMailSender mailSender;
+
+   @Autowired
+   private expenserepository expenseRepository;
+
 
     private EmailValidator emailValidator;
 
@@ -99,6 +111,9 @@ public class UserService {
         User user = apiUserRepository.findByEmail(resetPasswordRequest.getEmail())
                 .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
 
+        user.updatePassword(passwordEncoder.encode(resetPasswordRequest.getNewPassword()));
+        apiUserRepository.save(user);
+
         System.out.println("사용자 찾음: " + user.getEmail());
         return MessageResponse.builder()
                 .message("비밀번호가 성공적으로 변경되었습니다.")
@@ -115,10 +130,10 @@ public class UserService {
         return new UserInfoResponse(user.getEmail());
     }
 
-    public EmotionResponse getUserEmotion() {
+    /*public EmotionResponse getUserEmotion() {
         // Fetch the most used emotion
         return new EmotionResponse("기쁨");
-    }
+    }*/
 
     public MessageResponse updateUserInfo(UpdateUserRequest updateUserRequest) {
         // 이메일로 사용자 찾기
@@ -134,5 +149,21 @@ public class UserService {
                 .message("정보가 성공적으로 업데이트되었습니다.")
                 .email(user.getEmail())
                 .build();
+    }
+    public EmotionResponse getUserEmotion() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+
+        User user = apiUserRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + email));
+
+        List<Expense> expenses = expenseRepository.findByUser(user);
+        Map<EmotionType, Long> emotionCount = expenses.stream()
+                .filter(expense -> expense.getEmotion() != null)
+                .collect(Collectors.groupingBy(expense -> expense.getEmotion().getType(), Collectors.counting()));
+
+        EmotionType mostFrequentEmotion = Collections.max(emotionCount.entrySet(), Map.Entry.comparingByValue()).getKey();
+
+        return new EmotionResponse(mostFrequentEmotion.name());
     }
 }

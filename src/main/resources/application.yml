@@ -7,7 +7,8 @@ spring:
     #url: jdbc:mysql://127.0.0.1:3306/
     url: jdbc:mysql://localhost:3306/mydatabase
     username: root
-    password: Likelion1234@
+    #password: Likelion1234@
+    password:
 
     #url: jdbc:mysql://localhost:3305/emotion_app?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
     #username: root
@@ -41,7 +42,7 @@ springdoc:
       host: smtp.gmail.com            # 1
       port: 587                        # 2
       username: hka97123800@gmail.com               # 3
-      password: luyt fzam ehfv izpy      # 4
+      password:      # 4
       properties:
         mail:
           smtp:

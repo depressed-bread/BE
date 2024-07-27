@@ -37,7 +37,9 @@ public class UserController {
     //비밀번호 재설정
     @PostMapping("/reset-password")
     public ResponseEntity<MessageResponse> resetPassword(@RequestBody ResetPasswordDto resetPasswordRequest) {
-        return ResponseEntity.ok(userService.resetPassword(resetPasswordRequest));
+       //return ResponseEntity.ok(userService.resetPassword(resetPasswordRequest));
+        MessageResponse response = userService.resetPassword(resetPasswordRequest);
+        return ResponseEntity.ok(response);
     }
 
     //사용자 정보조회
