@@ -86,7 +86,7 @@ public class ExpenseService {
         }
 
         //4. 해당 게시글 조회하기
-        return new ExpenseResponseDto(expense.getKeyword(), expense.getContent(),
+        return new ExpenseResponseDto(expense.getKeyword(), expense.getContent(), expense.getDate(),
                 expense.getPrice(), expense.getEmotion().getName());
 
     }
