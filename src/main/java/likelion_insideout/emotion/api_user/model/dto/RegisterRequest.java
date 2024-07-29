@@ -28,7 +28,7 @@ public class RegisterRequest {
                 .email(this.email)
                 .phone(this.phone)
                 .role(Role.USER)
-                .emotion(EmotionType.JOY)
+                .emotion(EmotionType.DEPRESSION)
                 .build();
     }
 }

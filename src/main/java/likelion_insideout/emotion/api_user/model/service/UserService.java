@@ -19,6 +19,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.SimpleMailMessage;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -35,8 +36,8 @@ public class UserService {
     @Autowired
     private JavaMailSender mailSender;
 
-   @Autowired
-   private expenserepository expenseRepository;
+    @Autowired
+    private expenserepository expenseRepository;
 
 
     private EmailValidator emailValidator;
@@ -130,11 +131,6 @@ public class UserService {
         return new UserInfoResponse(user.getEmail());
     }
 
-    /*public EmotionResponse getUserEmotion() {
-        // Fetch the most used emotion
-        return new EmotionResponse("기쁨");
-    }*/
-
     public MessageResponse updateUserInfo(UpdateUserRequest updateUserRequest) {
         // 이메일로 사용자 찾기
         User user = apiUserRepository.findByEmail(updateUserRequest.getEmail())
@@ -158,12 +154,30 @@ public class UserService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + email));
 
         List<Expense> expenses = expenseRepository.findByUser(user);
+        if (expenses.isEmpty()) {
+            return new EmotionResponse("DEPRESSION");
+        }
+
+        // 감정 빈도수 계산
         Map<EmotionType, Long> emotionCount = expenses.stream()
                 .filter(expense -> expense.getEmotion() != null)
                 .collect(Collectors.groupingBy(expense -> expense.getEmotion().getType(), Collectors.counting()));
 
-        EmotionType mostFrequentEmotion = Collections.max(emotionCount.entrySet(), Map.Entry.comparingByValue()).getKey();
+        // 빈도수가 가장 높은 감정 찾기
+        long maxFrequency = Collections.max(emotionCount.values());
+        List<EmotionType> mostFrequentEmotions = emotionCount.entrySet().stream()
+                .filter(entry -> entry.getValue() == maxFrequency)
+                .map(Map.Entry::getKey)
+                .toList();
 
-        return new EmotionResponse(mostFrequentEmotion.name());
+        // 빈도수가 동일한 감정이 여러 개 있을 경우 총 지출 금액으로 결정
+        EmotionType mostExpensiveEmotion = mostFrequentEmotions.stream()
+                .max(Comparator.comparing(emotion -> expenses.stream()
+                        .filter(expense -> expense.getEmotion().getType() == emotion)
+                        .mapToLong(Expense::getPrice)
+                        .sum()))
+                .orElse(EmotionType.DEPRESSION);
+
+        return new EmotionResponse(mostExpensiveEmotion.name());
     }
 }

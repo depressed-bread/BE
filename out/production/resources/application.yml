@@ -4,15 +4,15 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #url: jdbc:mysql://127.0.0.1:3306/
-    url: jdbc:mysql://localhost:3306/mydatabase
-    username: root
-    #password: Likelion1234@
-    password: Gksrufdk09!@
+#    #url: jdbc:mysql://127.0.0.1:3306/
+#    url: jdbc:mysql://localhost:3306/mydatabase
+#    username: root
+#    #password: Likelion1234@
+#    password:
 
-    #url: jdbc:mysql://localhost:3305/emotion_app?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
-    #username: root
-    #password: 1234
+    url: jdbc:mysql://localhost:3305/emotion_app?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
 
   jpa:
     show-sql: true
@@ -42,7 +42,7 @@ springdoc:
       host: smtp.gmail.com            # 1
       port: 587                        # 2
       username: hka97123800@gmail.com               # 3
-      password: ztni khmd gdbw szol      # 4
+      password:      # 4
       properties:
         mail:
           smtp:
