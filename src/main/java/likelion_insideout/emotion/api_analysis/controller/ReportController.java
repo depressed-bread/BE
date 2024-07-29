@@ -66,4 +66,12 @@ public class ReportController {
             @RequestParam("month") int month) {
         return reportService.getMonthEmotion(authentication, year, month);
     }
+
+    @GetMapping("/calendar/day")
+    @Operation(summary = "달력 날짜에 해당하는 날의 지출 내역")
+    public List<ExpenseReportDto> getCalendarDayExpenses(
+            Authentication authentication,
+            @RequestParam("Date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
+        return reportService.getCalendarDayExpenses(authentication, date);
+    }
 }
