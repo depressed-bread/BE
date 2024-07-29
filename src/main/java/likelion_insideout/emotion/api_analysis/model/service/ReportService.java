@@ -215,4 +215,16 @@ public class ReportService {
 
         return dayEmotionDtos;
     }
+
+    public List<ExpenseReportDto> getCalendarDayExpenses(Authentication authentication, LocalDate date) {
+        User user = (User) userRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다: " + authentication.getName()));
+
+        // 모든 지출 정보 조회
+        List<ExpenseDto> expenses = expenseRepository.findAllByUserId(user.getId());
+
+        List<ExpenseReportDto> expenseReportDtoList = getExpensesByPeriod(expenses, date, date, "ALL");
+
+        return expenseReportDtoList;
+    }
 }

@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/dto/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/controller/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_analysis/model/service/ReportService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.EmotionApplication.executor": "Run",
-    "git-widget-placeholder": "feature/emotion",
+    "git-widget-placeholder": "feature/report-3",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/dbqud/OneDrive/바탕 화면/해커톤/BE/src/main/java",
