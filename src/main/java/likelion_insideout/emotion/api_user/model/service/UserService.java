@@ -45,7 +45,11 @@ public class UserService {
     @Transactional
     public MessageResponse registerUser(RegisterRequest registerRequest) {
         if (apiUserRepository.existsByEmail(registerRequest.getEmail())) {
-            throw new IllegalArgumentException("이미 사용 중인 이메일입니다.");
+            //throw new IllegalArgumentException("이미 사용 중인 이메일입니다.");
+            return MessageResponse.builder()
+                    .message("이미사용중인 이메일 입니다.")
+                    .email(registerRequest.getEmail())
+                    .build();
         }
 
         registerRequest.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
