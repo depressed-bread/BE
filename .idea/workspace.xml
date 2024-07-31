@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03f5a120-75df-4648-be18-b89bb3bed22d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c86e4d78-9f07-4408-ad4c-57bedf9eef8a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c86e4d78-9f07-4408-ad4c-57bedf9eef8a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/likelion_insideout/emotion/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/api_user/model/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likelion_insideout/emotion/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +173,8 @@
       <workItem from="1721904234606" duration="31353000" />
       <workItem from="1722091007005" duration="77000" />
       <workItem from="1722272108523" duration="669000" />
-      <workItem from="1722313949678" duration="1147000" />
+      <workItem from="1722313949678" duration="1327000" />
+      <workItem from="1722353813958" duration="7003000" />
     </task>
     <servers />
   </component>
