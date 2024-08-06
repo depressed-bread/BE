@@ -21,9 +21,8 @@ Wellness는 신체적, 정서적, 사회적, 지적인 영역에서 최상의 �
 + 서비스 접속 초기화면으로 '우울해서 빵 샀어'를 사용자들에게 간단히 소개하는 글과 사진이 나타납니다.
 + 시작하기 버튼을 누르면 로그인 화면으로 넘어갑니다.
 
-  <img src="https://github.com/user-attachments/assets/ab750667-7106-4611-8fb7-5b3bd647e235" width="300" height="550"/>
+<img src="https://github.com/user-attachments/assets/ab750667-7106-4611-8fb7-5b3bd647e235" width="300" height="550"/>
 
-  
   
 [회원가입 & 로그인]
 
@@ -34,11 +33,19 @@ Wellness는 신체적, 정서적, 사회적, 지적인 영역에서 최상의 �
 + 비밀번호는 영어 소문자와 숫자를 포함하여 8자 이상, 20자 이하로 입력해야합니다.
 + 비밀번호를 재입력하여 입력한 비밀번호가 일치해야만 가입이 완료됩니다.
 
+<img src="https://github.com/user-attachments/assets/3c544783-d5f0-4ed4-80d6-f6b8df6e0737" width="300" height="550"/>
+
+
 (로그인)
 
 + 입력한 아이디의 계정이 없거나 비밀번호가 틀린 경우 화면 하단에 경고 문구가 뜹니다.
 + 아이디나 비밀번호를 사용자가 기억하지 못한 경우를 대비하여 아이디 찾기와 임시 비밀번호 사용하기 기능을 구현하였습니다.
 + 임시 비밀번호는 입력한 이메일로 전송이 됩니다.
+
+
+<img src="https://github.com/user-attachments/assets/899cf203-13ff-4c5c-904f-2fdbe89aee06" width="300" height="550"/>
+<img src="https://github.com/user-attachments/assets/bd6a384f-5f33-4864-832d-31eea0121f34" width="300" height="550"/>
+
 
 [홈화면]
 + 홈화면에 있는 달력을 통해 한 달의 전체적인 기록을 간단하게 볼 수 있습니다.
