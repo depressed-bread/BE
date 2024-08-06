@@ -44,8 +44,6 @@ Wellness는 신체적, 정서적, 사회적, 지적인 영역에서 최상의 �
 
 
 <img src="https://github.com/user-attachments/assets/899cf203-13ff-4c5c-904f-2fdbe89aee06" width="300" height="550"/>
-<img src="https://github.com/user-attachments/assets/bd6a384f-5f33-4864-832d-31eea0121f34" width="300" height="550"/>
-
 
 ### 홈화면
 + 홈화면에 있는 달력을 통해 한 달의 전체적인 기록을 간단하게 볼 수 있습니다.
@@ -72,7 +70,12 @@ Wellness는 신체적, 정서적, 사회적, 지적인 영역에서 최상의 �
 
 <img src ="https://github.com/user-attachments/assets/886dfefa-e29a-4776-a4b3-c2b9abd4fdee" width="300" height = "550">
 <img src="https://github.com/user-attachments/assets/014deb56-a72c-48c5-af18-e89a9f12eee8" width="300" height = "550">
-  
+
+### 설정
++ 우측 상단에 있는 이모티콘을 누르면 설정 화면으로 이동합니다.
++ 사용자의 개인 정보를 변경할 수 있도록 회원 정보 수정, 비밀번호 재설정 및 로그아웃 기능을 구현하였습니다.
+
+<img src="https://github.com/user-attachments/assets/bd6a384f-5f33-4864-832d-31eea0121f34" width="300" height="550"/>
 
 ## 📚 디테일
 ★ API 명세서 : <https://tender-justice-575.notion.site/API-e67342fd71504db08eb1216edb002531>
